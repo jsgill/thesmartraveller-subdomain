@@ -196,6 +196,7 @@ const CustomForm = () => {
         <FormControl
           fullWidth
           variant="filled"
+          size={matchesLG ? "medium" : "small"}
           sx={{
             borderRadius: "5px",
           }}
@@ -230,6 +231,7 @@ const CustomForm = () => {
           fullWidth
           variant="filled"
           hiddenLabel
+          size={matchesLG ? "medium" : "small"}
           sx={{
             borderRadius: "5px",
           }}
@@ -255,7 +257,7 @@ const CustomForm = () => {
             </FormHelperText>
           )}
         </FormControl>
-        <FormControl fullWidth size={matchesLG ? "medium" : "medium"}>
+        <FormControl fullWidth size={matchesLG ? "medium" : "small"}>
           <Select
             displayEmpty
             value={data.packege}
