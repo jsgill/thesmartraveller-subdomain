@@ -42,7 +42,7 @@ const ButtonCustom = ({
         {content}{" "}
       </Typography>
       {spanContent && (
-        <Typography variant="subtitle1">
+        <Typography variant="subtitle1" sx={{ color: "white" }}>
           &nbsp; &nbsp; &nbsp;+91 7807021868
         </Typography>
       )}
