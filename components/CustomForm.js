@@ -255,7 +255,7 @@ const CustomForm = () => {
             </FormHelperText>
           )}
         </FormControl>
-        <FormControl fullWidth size={matchesLG ? "medium" : "small"}>
+        <FormControl fullWidth size={matchesLG ? "medium" : "medium"}>
           <Select
             displayEmpty
             value={data.packege}
