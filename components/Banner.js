@@ -1,5 +1,8 @@
 import React from "react";
-import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 import ButtonCustom from "./CustomButton";
 import CustomForm from "./CustomForm";
 import styles from "../styles/Home.module.css";
@@ -31,7 +34,7 @@ const Banner = () => {
         alignItems="center"
         mt={matchesSM ? 9 : 13}
         mb={8}
-        px={matchesMD ? (matchesMMD ? 7 : matches ? 3.1 : 4) : 0}
+        px={matchesMD ? (matchesMMD ? 7 : matches ? 3.7 : 4) : 0}
         sx={{
           zIndex: "20",
         }}

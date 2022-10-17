@@ -1,30 +1,25 @@
-import React, { useState, useContext, useEffect, useRef } from "react";
-import {
-  Box,
-  Typography,
-  Stack,
-  MenuItem,
-  Select,
-  FormControl,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
+import React, { useState } from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
+import Stack from "@mui/material/Stack";
+import FormControl from "@mui/material/FormControl";
+import MenuItem from "@mui/material/MenuItem";
+import Select from "@mui/material/Select";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import ButtonCustom from "./CustomButton";
 import axios from "axios";
-import { RefContext } from "./context/ContextData";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FormHelperText } from "@mui/material";
+import FormHelperText from "@mui/material/FormHelperText";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import validator from "validator";
 
 const recaptchaPublicKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
 
 const CustomForm = () => {
-  const { setReff } = useContext(RefContext);
   const recaptchaRef = React.createRef();
-  const nameRef = useRef(null);
 
   const theme = useTheme();
   const cacheLG = useMediaQuery("(min-width:992px)");
@@ -146,10 +141,6 @@ const CustomForm = () => {
     }
   };
 
-  useEffect(() => {
-    setReff(nameRef);
-  }, [nameRef, setReff]);
-
   return (
     <Box
       display="flex"
@@ -207,7 +198,6 @@ const CustomForm = () => {
             name="name"
             required={true}
             value={data.name}
-            inputRef={nameRef}
             onChange={(e) => handleChange(e)}
             sx={{ backgroundColor: "#e3f2fd" }}
           />
