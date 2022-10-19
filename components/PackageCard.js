@@ -9,6 +9,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Image from "next/future/image";
 import ButtonCustom from "./CustomButton";
+import { fireIcon } from "../public/imageData";
 
 const PackageCard = ({ name, price, img, stay, quality }) => {
   const theme = useTheme();
@@ -125,7 +126,7 @@ const PackageCard = ({ name, price, img, stay, quality }) => {
               }}
             >
               <Image
-                src="https://ik.imagekit.io/ahsrg6khu/LEAD/fire_zLBBXiqvF.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1666092222403"
+                src={fireIcon}
                 alt="fire icon"
                 layout="resposive"
                 width={15}

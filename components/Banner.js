@@ -5,6 +5,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import ButtonCustom from "./CustomButton";
 import CustomForm from "./CustomForm";
+import { bannerBackground } from "../public/imageData";
 import styles from "../styles/Home.module.css";
 
 const Banner = () => {
@@ -24,6 +25,13 @@ const Banner = () => {
       justifyContent="center"
       alignItems="center"
       className={styles.bannerBG}
+      style={{
+        background: `url(${bannerBackground})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        minHeight: "90vh",
+      }}
     >
       <Box
         display="flex"
